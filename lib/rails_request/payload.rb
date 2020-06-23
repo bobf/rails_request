@@ -13,9 +13,10 @@ module RailsRequest
       port = RailsRequest.port
       [
         'curl',
+        '-v',
         "--request '#{method}'",
         headers.map { |key, value| "--header '#{key}: #{value}'" },
-        "http://#{host}:#{port}#{path}#{query}"
+        "'http://#{host}:#{port}#{path}#{query}'"
       ].flatten.join(" \\\n")
     end
 
