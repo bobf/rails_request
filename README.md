@@ -7,7 +7,7 @@ _Rails_ toolkit for debugging and inspecting requests.
 Add the gem to your `Gemfile`
 
 ```ruby
-gem 'rails_request', '~> 0.1.1'
+gem 'rails_request', '~> 0.1.2'
 ```
 
 And rebuild your bundle:
