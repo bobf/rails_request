@@ -31,6 +31,8 @@ module RailsRequest
     private
 
     def headers
+      return [] if @payload[:headers].nil?
+
       @payload[:headers]
         .select { |key, *_| key.start_with?('HTTP') }
         .map do |key, value|
